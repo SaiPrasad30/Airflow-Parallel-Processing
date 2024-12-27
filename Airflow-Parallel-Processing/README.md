@@ -1,9 +1,7 @@
 # Weather-Data-Pipeline-Orchestration-Using-Apache-Airflow-Self-Managed-and-AWS-Managed
 
-##Overview
-This project implements a data pipeline that collects weather data from the OpenWeather API. The data is processed, stored in multiple systems, and managed for efficient parallel processing and integration into a centralized data lake. The pipeline is orchestrated using 
-##AWS Managed Airflow
-, ensuring a fully managed and scalable solution for workflow automation.
+#Overview
+This project implements a data pipeline that collects weather data from the OpenWeather API. The data is processed, stored in multiple systems, and managed for efficient parallel processing and integration into a centralized data lake. The pipeline is orchestrated using AWS Managed Airflow, ensuring a fully managed and scalable solution for workflow automation.
 
 #Project Goals
 1) Automated Data Extraction: Fetch weather data from the OpenWeather API at regular intervals.
