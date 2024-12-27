@@ -176,13 +176,13 @@ with DAG('weather_dag_parallel_processing',
             is_houston_weather_api_ready = HttpSensor(
                 task_id ='tsk_is_houston_weather_api_ready',
                 http_conn_id='weathermap_api',
-                endpoint='/data/2.5/weather?q=houston&APPID=fd210dc7bbeb56db3f9f39ecc32fc3ff'
+                endpoint='/data/2.5/weather?q=houston&APPID=<Your api key>'
             )
 
             extract_houston_weather_data = SimpleHttpOperator(
                 task_id = 'tsk_extract_houston_weather_data',
                 http_conn_id = 'weathermap_api',
-                endpoint='/data/2.5/weather?q=chicago&APPID=fd210dc7bbeb56db3f9f39ecc32fc3ff',
+                endpoint='/data/2.5/weather?q=chicago&APPID=<Your api key>',
                 method = 'GET',
                 response_filter= lambda r: json.loads(r.text),
                 log_response=True
